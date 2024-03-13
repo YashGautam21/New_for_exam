@@ -1,0 +1,25 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+{{> navbar}}
+<body>
+    All Blogs
+
+{{!-- To display the data --}}
+{{#each blogarr}}
+    <ul>
+        {{!-- This is kind of the loop which will iterate on the data array which is passed here... --}}
+        
+            <li>{{this}}</li>
+            {{!-- <li></li>
+            <li></li> --}}
+            <button><a href='/delete/{{this.blogId}}'>Delete</a></button>
+       
+    </ul>
+     {{/each}}
+</body>
+</html>
